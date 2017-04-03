@@ -265,6 +265,25 @@ footer{
 	float:left;
 	width: 90%;
 	margin-top:2%;
-	padding-bottom: 2%;
+	padding-bottom: 1%;
 	margin-left:5%;	
+}
+
+.UserComent{
+	float:left;
+	width: 98%;
+	background-color: orange;
+	margin-left: 1%;
+	margin-top:1%;
+	border:1px solid black;
+}
+
+.UserComent img{
+	float:left;
+}
+
+.UserComent p{
+	float:left;
+	width:80%;
+	margin-left: 1%;
 }
