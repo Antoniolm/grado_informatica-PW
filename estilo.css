@@ -151,7 +151,6 @@ footer{
 	float:left;
 	background-color: green;
 	min-height: 600px;
-	max-height: 600px;
 }
 
 .comentaryArticle{
@@ -200,7 +199,6 @@ footer{
 	overflow-y: scroll;
 	overflow-x: hidden;
 	min-height: 600px;
-	max-height: 600px;
 }
 
 #activateUserPanel article{
@@ -243,15 +241,30 @@ footer{
 	margin-top:2%;
 }
 .titleEntry{
+	width: 100%;
 	float:left;
 }
 
 .textEntry{
-	width: 100%;
+	width: 95%;
 	float:left;
 }
 .imageEntry{
 	min-width: 200px;
 	float:left;
-	padding-bottom: 4%
+	padding-bottom: 4%;
+}
+
+/*
+*
+*Css -> comentaries
+*
+*/
+#ComentPanel{
+	background-color: blue;
+	float:left;
+	width: 90%;
+	margin-top:2%;
+	padding-bottom: 2%;
+	margin-left:5%;	
 }
