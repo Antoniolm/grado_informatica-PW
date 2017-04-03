@@ -368,3 +368,16 @@ footer{
 	width: 80%;
 	background-color: red;
 }
+
+#buttonImage{
+	float:left;
+	background-color: red;
+	margin-top:1%;
+	margin-left: 12%;
+}
+#buttonSubmit{
+	float:right;
+	background-color: red;
+	margin-top:1%;
+	margin-right: 12%;
+}
