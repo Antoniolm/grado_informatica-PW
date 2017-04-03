@@ -327,3 +327,44 @@ footer{
 	margin-top:2%;
 	margin-left: 15%;
 }
+
+/*
+*
+*Css -> write panel perfil
+*/
+#writePerfilPanel{
+	float:left;
+	background-color: white;
+	width: 90%;
+	margin-top:2%;
+	margin-left:5%;
+	margin-bottom: 2%;
+	padding-bottom: 1%;
+	border:1px solid black;
+}
+#writePerfilPanel img{
+	float:left;
+	background-color: green;
+	margin-left:2%;
+	border: 1px solid black;
+}
+
+#writePerfilPanel p{
+	float:left;
+	width: 95%;
+	margin-left:2%;
+	background-color: green;
+}
+
+#writePerfilPanel textarea{
+	float:left;
+	margin-top:2%;
+	width: 80%;
+	min-height: 75px;
+}
+
+#titleWrite{
+	float:left;
+	width: 80%;
+	background-color: red;
+}
