@@ -144,6 +144,7 @@ footer{
 	width:100%;
 	float:left;
 	background-color: black;
+	display: flex;
 }
 
 #comentaryPanel{
@@ -151,6 +152,7 @@ footer{
 	float:left;
 	background-color: green;
 	min-height: 600px;
+	align-items: stretch;
 }
 
 .comentaryArticle{
@@ -198,7 +200,7 @@ footer{
 	background-color: yellow;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	min-height: 600px;
+	align-items: stretch;
 }
 
 #activateUserPanel article{
