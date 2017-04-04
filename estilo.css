@@ -248,7 +248,7 @@ footer{
 	float:left;
 	margin-left:5%;
 	margin-top:3%;
-	background-color: #344A78;
+	background-color: #7095E4;
 	border:1px solid black;
 }
 .entryArticle img{
@@ -282,18 +282,19 @@ footer{
 *
 */
 #ComentPanel{
-	background-color: blue;
+	background-color: #7095E4;
 	float:left;
 	width: 90%;
 	margin-top:2%;
 	padding-bottom: 1%;
 	margin-left:5%;	
+	border: 1px solid black;
 }
 
 .UserComent{
 	float:left;
 	width: 98%;
-	background-color: orange;
+	background-color: #344A78;
 	margin-left: 1%;
 	margin-top:1%;
 	border:1px solid black;
@@ -314,7 +315,7 @@ footer{
 */
 #WritePanel{
 	float:left;
-	background-color: white;
+	background-color: #7095E4;
 	width: 90%;
 	margin-top:2%;
 	margin-left:5%;
@@ -331,22 +332,22 @@ footer{
 
 #WritePanel p{
 	float:left;
-	width: 60%;
-	background-color: green;
+	width: 83.5%;
+	margin-left: 1%;
+	background-color: #344A78;
 }
 
 #WritePanel textarea{
 	float:left;
-	margin-top:2%;
+	margin-left:1%;
 	width: 80%;
 	min-height: 75px;
 }
 
 #WritePanel form{
 	float:left;
-	background-color: green;
 	margin-top:2%;
-	margin-left: 15%;
+	margin-left: 16%;
 }
 
 /*
@@ -355,7 +356,7 @@ footer{
 */
 #writePerfilPanel{
 	float:left;
-	background-color: white;
+	background-color: #7095E4;
 	width: 90%;
 	margin-top:2%;
 	margin-left:5%;
@@ -372,9 +373,9 @@ footer{
 
 #writePerfilPanel p{
 	float:left;
-	width: 95%;
+	width: 98%;
 	margin-left:2%;
-	background-color: green;
+	background-color: #344A78;
 }
 
 #writePerfilPanel textarea{
@@ -383,23 +384,23 @@ footer{
 	margin-left: 2%;
 	width: 80%;
 	min-height: 75px;
+	background-color: #F4F8FF;
 }
 
 #titleWrite{
 	float:left;
 	width: 80%;
 	margin-left: 2%;
+	background-color: #F4F8FF;
 }
 
 #buttonImage{
 	float:left;
-	background-color: red;
 	margin-top:1%;
 	margin-left: 14%;
 }
 #buttonSubmit{
 	float:right;
-	background-color: red;
 	margin-top:1%;
 	margin-right: 10%;
 }
