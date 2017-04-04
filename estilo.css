@@ -1,4 +1,5 @@
 body {
+	background-color: #F4F8FF;
 }
 h3 {
 	text-align: center;
@@ -9,13 +10,15 @@ header{
 	width: 100%;
 	float:left;
 	margin-bottom: 1%;
-	background:#2B6829;
+	background:#3B5998;
 }
 footer{
 	width: 100%;
 	height: 100%;
 	float:left;
-	background:#2B6829;
+	background:#3B5998;
+	margin-top: 1%;
+	border: 1px solid black;
 }
 #imageLogo{
 	float:left;
@@ -62,11 +65,9 @@ footer{
 }
 
 .informationFoot{
-	background:yellow;
 	float:left;
-	width:25%;
-	border: 1px solid gray;
-	border-top: 0px solid gray;
+	width:10%;
+	margin-left: 10%;
 }
 
 /*
@@ -95,7 +96,7 @@ footer{
 	text-align: center;
 }
 #menuPanel ul{
-	background-color:#208935;
+	background-color:#344A78;
 	padding-bottom:1%;
 	padding-top:1%;
 }
@@ -111,7 +112,7 @@ footer{
 	color:white;
 }
 #menuPanel li a:hover {
-	background-color:#1F5C2B;
+	background-color:#2A3753;
 	padding-bottom:1%;
 	padding-top:1%;
 }
@@ -121,15 +122,16 @@ footer{
 	width: 100%;
 	max-height: 200px;
 	float:left;
-	margin-top: -17px;
-	background-color:orange;
+	margin-top: 0%;
+	background-color:#D9E2F6;
     overflow-y: scroll;
 	overflow-x: hidden;
+	border: 1px solid black;
 }
 
 .peopleArticle{
 	width: 9%;
-	background-color: blue;
+	background-color: #7095E4;
 	float:left;
 	margin: 0.5%;  
 	border:1px solid black;
@@ -155,21 +157,23 @@ footer{
 #mainPerfilSection{
 	width:100%;
 	float:left;
-	background-color: black;
 	display: flex;
+	margin-top: 1%;
 }
 
 #comentaryPanel{
-	width:85%;
+	width:84%;
 	float:left;
-	background-color: green;
 	min-height: 600px;
 	align-items: stretch;
+	margin-right: 1%;
+	border: 1px solid black;
+	background-color:#D9E2F6;
 }
 
 .comentaryArticle{
 	width: 30%;
-	background-color: blue;
+	background-color: #7095E4;
 	float:left;
 	margin: 0.9%;  
 	margin-left:1.5%;
@@ -199,27 +203,28 @@ footer{
 .titleComentary {
 	float:left;
 	width: 98%;
-	background-color: red;
+	background-color: #344A78;
 	margin-bottom: 0px;
 }
 .textComentary {
 	float:left;
-	width: 98%;
-	background-color: white;
+	width: 96%;
+	
 }
 
 #activateUserPanel{
 	width:14.99%;
 	float:left;
-	background-color: yellow;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	align-items: stretch;
+	border: 1px solid black;
+	background-color:#D9E2F6;	
 }
 
 #activateUserPanel article{
 	width: 70%;
-	background-color: blue;
+	background-color: #7095E4;
 	float:left;
 	margin: 0.5%;  
 	margin-left:15%;
@@ -243,7 +248,7 @@ footer{
 	float:left;
 	margin-left:5%;
 	margin-top:3%;
-	background-color: red;
+	background-color: #344A78;
 	border:1px solid black;
 }
 .entryArticle img{
@@ -375,6 +380,7 @@ footer{
 #writePerfilPanel textarea{
 	float:left;
 	margin-top:2%;
+	margin-left: 2%;
 	width: 80%;
 	min-height: 75px;
 }
@@ -382,18 +388,18 @@ footer{
 #titleWrite{
 	float:left;
 	width: 80%;
-	background-color: red;
+	margin-left: 2%;
 }
 
 #buttonImage{
 	float:left;
 	background-color: red;
 	margin-top:1%;
-	margin-left: 12%;
+	margin-left: 14%;
 }
 #buttonSubmit{
 	float:right;
 	background-color: red;
 	margin-top:1%;
-	margin-right: 12%;
+	margin-right: 10%;
 }
