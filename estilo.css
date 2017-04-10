@@ -335,6 +335,7 @@ footer{
 	background-color: green;
 	margin-top:2%;
 	margin-left:5%;
+	max-width: 100px;
 }
 
 #WritePanel p{
