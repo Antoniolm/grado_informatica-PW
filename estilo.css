@@ -309,6 +309,7 @@ footer{
 
 .UserComent img{
 	float:left;
+	max-height: 100px;
 }
 
 .UserComent p{
