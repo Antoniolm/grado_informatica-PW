@@ -6,6 +6,9 @@ h3 {
 	color: #FF0000;
 }
 
+a{
+	color:black;
+}
 a:visited{
 	color:black;
 }
@@ -373,6 +376,7 @@ footer{
 	background-color: green;
 	margin-left:2%;
 	border: 1px solid black;
+	max-width: 120px;
 }
 
 #writePerfilPanel p{
