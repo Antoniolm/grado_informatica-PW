@@ -6,6 +6,10 @@ h3 {
 	color: #FF0000;
 }
 
+a:visited{
+	color:black;
+}
+
 header{
 	width: 100%;
 	float:left;
