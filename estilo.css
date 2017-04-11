@@ -427,3 +427,33 @@ footer{
 	margin-top:1%;
 	margin-right: 10%;
 }
+
+/*
+*
+* Sección para el menu de foto
+*/
+
+.photoArticle{
+	width: 30%;
+	background-color: #7095E4;
+	float:left;
+	margin: 0.9%;  
+	margin-left:1.5%;
+	margin-top:1.5%;
+	border:1px solid black;
+	min-height: 200px;
+	max-height: 350px;
+}
+
+.photoArticle img{
+	
+	width: 100%;
+	float :left;
+	min-height: 200px;
+	max-height: 350px;
+}
+
+.photoArticle p{
+	margin-left: 2%;
+	margin-top:2%;
+}
