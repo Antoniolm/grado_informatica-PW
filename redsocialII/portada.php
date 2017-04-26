@@ -1,19 +1,3 @@
-<!DOCTYPE HTML>
-<html lang = "en">
-<head><title>FaceToFace</title>
-<meta charset = "UTF-8" />
-<meta name=”viewport” content=”width=device-width”>
-<link rel = "stylesheet" type = "text/css" href = "portada.css" />
-</head>
-<header>
-	<a href="#"><img id="imageLogo" src="./img/faceface.png"/></a>
-	<a href="#"><h1 id="nameSocial"> FaceToFace</h1></a>
-	<section id="loginPanel">
-		<a href="coment.html"><p id="NamePerfil">Pepe</p></a>
-		<a href="coment.html"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
-		<a href="index.html">Desconectar</a>
-	</section>
-</header>
 <body>
 	<nav  id="menuPanel">
 		<ul>
@@ -211,23 +195,3 @@
 
 	
 </body>
-<footer>
-	<section class="informationFoot">
-	<a href="contact.html"><p>Contacto</p></a>
-	</section>
-	<section class="informationFoot">
-	<a href="como_se_hizo.pdf"><p>Como se hizo</p></a>
-	</section>
-	<article id="slider">
-		<figure>
-		<img src="./img/faceface.png" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		</figure>
-	</article>
-</footer>
-
-
-</html>

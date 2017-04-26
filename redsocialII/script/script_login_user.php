@@ -12,7 +12,8 @@ if(!empty($row)){
 	session_start();
 	$_SESSION["nickname"] = $row['nickname']; 
 	$_SESSION["id_user"] = $row['ID_user']; 
+	header('location: ../index.php?cat=portada');
+}else{
+	header('location: ../index.php');
 }
-header('location: ../index.php');
-
 ?>

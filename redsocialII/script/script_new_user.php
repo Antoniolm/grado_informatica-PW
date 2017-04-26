@@ -7,11 +7,7 @@ $nickname = isset($_POST['nickname']) ? $_POST['nickname'] : '';
 $password = isset($_POST['password']) ? $_POST['password'] : '';
 $image = isset($_POST['image']) ? $_POST['image'] : 'prueba.png';
 
-echo $name." ".$lastname." ".$nickname." ".$password." ".$image;
-
-	//Realizamos la consulta
-    $result = $datos->Query("insert into user (name,lastname,nickname,password,image) values ('$name','$lastname','$nickname','$password','$image')");
-    //Comprobamos que se ha realizado el insert correctamente
-    header('location: ../index.php');
+$datos->Query("insert into user (name,lastname,nickname,password,image) values ('$name','$lastname','$nickname','$password','$image')");
+header('location: ../index.php');
 	
 ?>
