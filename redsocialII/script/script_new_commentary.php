@@ -1,5 +1,5 @@
 <?php
-include "../dataBaseConnection.php";
+include_once "../dataBaseConnection.php";
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $lastname = isset($_POST['lastname']) ? $_POST['lastname'] : '';

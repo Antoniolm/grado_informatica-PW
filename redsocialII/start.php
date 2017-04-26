@@ -1,6 +1,3 @@
-<?php 
-	include("dataBaseConnection.php"); 
-?>
 <body>
 	<section class="MainSection">
 		<img id="imageMainSectionLeft" src="./img/faceface.png"/>

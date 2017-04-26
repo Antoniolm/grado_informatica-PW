@@ -1,12 +1,10 @@
 <?php
-include "../dataBaseConnection.php";
+include_once "../DataBaseConnection.php";
 
 $nickname = isset($_POST['user']) ? $_POST['user'] : '';
 $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-$select="SELECT * FROM user WHERE nickname='".$nickname."' and password='".$password."'";
-$result=$dbAccess->query($select);
-$row= mysqli_fetch_array($result);
+$row= $user->checkLogin($nickname,$password);
 
 if(!empty($row)){
 	session_start();

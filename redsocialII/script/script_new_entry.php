@@ -1,5 +1,5 @@
 <?php
-include "../dataBaseConnection.php";
+include_once "../dataBaseConnection.php";
 
 session_start();
 $id_user=$_SESSION["id_user"];
