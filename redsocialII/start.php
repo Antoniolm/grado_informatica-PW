@@ -1,5 +1,5 @@
 <?php 
-	include("conexionBD.php"); 
+	include("dataBaseConnection.php"); 
 ?>
 <body>
 	<section class="MainSection">
