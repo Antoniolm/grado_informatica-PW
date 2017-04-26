@@ -12,14 +12,14 @@
 		session_start();
 		if(!isset($_SESSION["nickname"])){?>
 			<form action="./script/script_login_user.php" method="post">
-			Nombre:<br><input type="text" id="user"  name="user" required/><br>
-			Contraseña:<br><input type="text" id="password"  name="password" required/><br>
+			Nombre:<br><input type="text" name="user" required/><br>
+			Contraseña:<br><input type="text" name="password" required/><br>
 			<input type="submit" value="login" /><br>
 			</form>
 		<?php }
 		else{ ?>
-			<a href="coment.html"><p id="NamePerfil">Pepe</p></a>
-			<a href="coment.html"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
+			<a href="index.php?category=comment"><p id="NamePerfil">Pepe</p></a>
+			<a href="index.php?category=comment"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
 			<a href="./script/script_close_user.php">Desconectar</a>
 		<?php } ?>
 		

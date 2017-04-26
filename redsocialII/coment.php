@@ -1,19 +1,3 @@
-<!DOCTYPE HTML>
-<html lang = "en">
-<head><title>FaceToFace</title>
-<meta charset = "UTF-8" />
-<link rel = "stylesheet" type = "text/css" href = "estilo.css" />
-</head>
-<header>
-	<a href="portada.html"><img id="imageLogo" src="./img/faceface.png"/></a>
-	<a href="portada.html"><h1 id="nameSocial"> FaceToFace</h1></a>
-	<section id="loginPanel">
-		<a href="#"><p id="NamePerfil">Pepe</p></a>
-		<a href="#"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
-		<a href="index.html">Desconectar</a>
-		
-	</section>
-</header>
 <body>
 	<nav  id="menuPanel">
 		<ul>
@@ -115,9 +99,9 @@
 				<p>Pepe</p>
 				<img src="./img/forest.jpg"/>
 				
-				<form>
-					<input id="titleWrite" type="text" placeholder="Introduce aqui el titulo de la entrada"/>
-					<textarea name="comment" row="4" form="usrform" placeholder="Introduce aqui tu nueva entrada"></textarea>
+				<form action="./script/script_new_entry.php" method="post">
+					<input id="titleWrite" type="text" id="title"  name="title"  placeholder="Introduce aqui el titulo de la entrada"/>
+					<textarea row="4" name="description" placeholder="Introduce aqui tu nueva entrada"></textarea>
 					<input id="buttonImage" type="submit" value="Upload Image"/>
 					<input id="buttonSubmit" type="submit" value="Submit"/>
 				</form>
@@ -217,27 +201,4 @@
 		
 		</aside>
 	</section>
-
-	
 </body>
-
-<footer>
-	<section class="informationFoot">
-	<a href="contact.html"><p>Contacto</p></a>
-	</section>
-	<section class="informationFoot">
-	<a href="como_se_hizo.pdf"><p>Como se hizo</p></a>
-	</section>
-	<article id="slider">
-		<figure>
-		<img src="./img/faceface.png" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		</figure>
-	</article>
-</footer>
-
-
-</html>
