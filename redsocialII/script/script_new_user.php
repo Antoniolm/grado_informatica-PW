@@ -12,6 +12,6 @@ echo $name." ".$lastname." ".$nickname." ".$password." ".$image;
 	//Realizamos la consulta
     $result = $datos->Query("insert into user (name,lastname,nickname,password,image) values ('$name','$lastname','$nickname','$password','$image')");
     //Comprobamos que se ha realizado el insert correctamente
-    //header('location: ../index.php');
+    header('location: ../index.php');
 	
 ?>
