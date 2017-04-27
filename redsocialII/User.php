@@ -1,5 +1,4 @@
 <?php
-include_once "../DataBaseAccess.php";
 
 class User {
 
