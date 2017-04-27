@@ -8,7 +8,7 @@ else if($category=='portada'){
 	require_once('portada.php');
 }
 else if($category=='comment'){
-	require_once('coment.php');
+	require_once('comment.php');
 }
 
 ?>

@@ -1,3 +1,7 @@
+<?php
+	include_once "./DataBaseConnection.php";
+?>
+
 <body>
 	<nav  id="menuPanel">
 		<ul>
@@ -106,62 +110,20 @@
 					<input id="buttonSubmit" type="submit" value="Submit"/>
 				</form>
 			</section>
-			<article class="comentaryArticle">
-			<p>Pepe</p>
-			<img src="./img/egg.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<p class="titleComentary"> Titulo1</p>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
-		<article class="comentaryArticle">
-			<p>Pepe</p>
-			<img src="./img/forest.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="Entrada.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
-		<article class="comentaryArticle">
-			<p>Pepe</p>
-			<img src="./img/monkey.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="Entrada.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
-		<article class="comentaryArticle">
-			<p>Pepe</p>
-			<img src="./img/forest.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="Entrada.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
+			<?php 
+				$result=$entry->searchUserEntry($_SESSION["id_user"]);
+				while ($row=mysqli_fetch_row($result)){ ?>
+					<article class="comentaryArticle">
+					<p><?php echo $_SESSION["nickname"]?></p>
+					<img src="./img/egg.jpg"/>
+					<p class="hourP"><?php echo $row[4] ?></p>
+					<p class="titleComentary"> <?php echo $row[2] ?></p>
+					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
+					</article>
 
-		</article>
-		<article class="comentaryArticle">
-			<p>Pepe</p>
-			<img src="./img/goat.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="Entrada.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
+			<?php    				
+    			}
+			?>
 
 		<article id="cursor">
 		<a href="#"><img  src="./img/cursorLeft.png"/></a>
