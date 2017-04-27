@@ -5,95 +5,24 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="#">-Biografía-</a></li>
+		<li><a href="index.php?category=portada">-Biografía-</a></li>
 		<li><a href="fotos.html">-Fotos-</a></li>
 		<li><a href="info.html">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
+		<?php
+		$result=$user->searchAllUser();
+		while ($row=mysqli_fetch_row($result)){ ?>
+			<a href="jose.html"/>
+			<article class="peopleArticle">
+			<p><?php echo $row[3] ?></p>
 			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
+			</article>
+			</a>
+		<?php    				
+    		}
+		?>
 	</section>
 
 
