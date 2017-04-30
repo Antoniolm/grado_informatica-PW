@@ -7,7 +7,7 @@
 		<ul>
 		<li><a href="#">-Biografía-</a></li>
 		<li><a href="fotos.html">-Fotos-</a></li>
-		<li><a href="info.html">-Informacion-</a></li>
+		<li><a href="index.php?category=info">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">

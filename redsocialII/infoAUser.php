@@ -5,9 +5,9 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION["id_Auser"]?>">-Biografía-</a></li>
+		<li><a href="#">-Biografía-</a></li>
 		<li><a href="fotos.html">-Fotos-</a></li>
-		<li><a href="index.php?category=infoAUser&iduser=<?php echo $_SESSION["id_Auser"]?>">-Informacion-</a></li>
+		<li><a href="#">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">
@@ -28,27 +28,13 @@
 
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
-			<?php 
-				$result=$entry->searchUserEntry($_SESSION["id_Auser"]);
-				$i=0;
-				while ($row=mysqli_fetch_row($result)){
-					$userEntry=$user->searchUser($row[1]);
-					if($i<6){ ?>
-					<article class="comentaryArticle">
-					<p><?php echo $userEntry['nickname'] ?></p>
-					<img src="./img/egg.jpg"/>
-					<p class="hourP"><?php echo $row[4] ?></p>
-					<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>"><p class="titleComentary"> <?php echo $row[2] ?></p></a>
-					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
-					</article>
-			<?php    				
-    				}$i++;
-				}
-			?>
-
-		<article id="cursor">
-		<a href="#"><img  src="./img/cursorLeft.png"/></a>
-		<a href="portadaSigPag.html" ><img src="./img/cursorRight.png"/></a>
+		<article id="ChangeInfo" >
+			<h2>Información de usuario</h2>
+			<img src="./img/monkey.jpg"/><br>
+			Nombre:Maria<br><br>
+			Apellido:lopez<br><br>
+			Nombre en la red:Maria<br><br>
+			Contraseña:********<br><br>
 		</article>
 		</section>
 
@@ -85,4 +71,6 @@
 		
 		</aside>
 	</section>
+
+	
 </body>

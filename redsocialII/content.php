@@ -20,5 +20,12 @@ else if($category=='mainEntry'){
 	$_SESSION["id_comentary"]=$idCommentary;
 	require_once('entrada.php');
 }
+else if($category=='info'){
+	require_once('info.php');
+}
+else if($category=='infoAUser'){
+	$_SESSION["id_Auser"]=$idUser;
+	require_once('infoAUser.php');
+}
 
 ?>
