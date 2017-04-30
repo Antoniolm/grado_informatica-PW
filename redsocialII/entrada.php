@@ -1,7 +1,7 @@
 <?php
 	include_once "./DataBaseConnection.php";
-	$idCommentary = $_SESSION["id_comentary"];
-	$dataEntry=$entry->searchEntry($idCommentary);
+	$idEntry = $_SESSION["id_comentary"];
+	$dataEntry=$entry->searchEntry($idEntry);
 	$dataUser=$user->searchUser($dataEntry['ID_user']);
 ?>
 
@@ -113,25 +113,26 @@
 				<img class="imageEntry" src="./img/egg.jpg"/>
 			</article>
 			<section id="ComentPanel">
-				<article class="UserComent">
-					<img src="./img/monkey.jpg"/>
-					<p>Maria - 10 horas</p>
-					<p>Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de texto</p>
-				</article>
-				<article class="UserComent">
-					<img src="./img/monkey.jpg"/>
-					<p>Maria - 10 horas</p>
-					<p>Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de texto</p>
-				</article>
+				<?php 
+					$result=$commentary->searchEntryCommentary($idEntry);
+					while ($row=mysqli_fetch_row($result)){ 
+						$userCommentary=$user->searchUser($row[2]) ?>
+						<article class="UserComent">
+						<img src="./img/monkey.jpg"/>
+						<p><?php echo $userCommentary['nickname']." - ".$row[3]; ?> </p>
+						<p><?php echo $row[4]; ?></p>
+						</article>
+				<?php    				
+	    			}
+				?>
+				
 			</section>
 
 			<section id="WritePanel">
 				<img src="./img/forest.jpg"/>
-				<p>hola</p>
-				<textarea name="comment" row="4" form="usrform">Enter text here...</textarea>
-				<form>
+				<p><?php echo $_SESSION["nickname"] ?></p>
+				<textarea name="description" row="4" form="usrform">Enter text here...</textarea>
+				<form id="usrform" action="./script/script_new_commentary.php?entry=<?php echo $idEntry?>&id=<?php echo $_SESSION['id_user']?>" method="post">
 					<input type="submit"/>
 				</form>
 			</section>
