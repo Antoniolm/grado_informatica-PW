@@ -1,19 +1,10 @@
-<!DOCTYPE HTML>
-<html lang = "en">
-<head><title>FaceToFace</title>
-<meta charset = "UTF-8" />
-<link rel = "stylesheet" type = "text/css" href = "estilo.css" />
-</head>
-<header>
-	<a href="portada.html"><img id="imageLogo" src="./img/faceface.png"/></a>
-	<a href="portada.html"><h1 id="nameSocial"> FaceToFace</h1></a>
-	<section id="loginPanel">
-		<a href="coment.html"><p id="NamePerfil">Pepe</p></a>
-		<a href="coment.html"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
-		<a href="index.html">Desconectar</a>
-		
-	</section>
-</header>
+<?php
+	include_once "./DataBaseConnection.php";
+	$idCommentary = $_SESSION["id_comentary"];
+	$dataEntry=$entry->searchEntry($idCommentary);
+	$dataUser=$user->searchUser($dataEntry['ID_user']);
+?>
+
 <body>
 	<nav  id="menuPanel">
 		<ul>
@@ -113,19 +104,12 @@
 
 		<section id="comentaryPanel">
 			<article class="entryArticle">
-				<p>Pepe</p>
+				
+				<p> <?php echo $dataUser['nickname'] ?></p>
 				<img src="./img/forest.jpg"/>
-				<p class="hourP"> 20 hours</p>
-				<p class="titleEntry"> Titulo1</p>
-				<p class="textEntry" maxlength="3"> Esto es una prueba de texto
-				Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de textoEsto es una prueba de textoEsto es una prueba de texto
-				Esto es una prueba de texto</p>
+				<p class="hourP"> <?php echo $dataEntry['date'] ?></p>
+				<p class="titleEntry">  <?php echo $dataEntry['title'] ?></p>
+				<p class="textEntry" maxlength="3">  <?php echo $dataEntry['description'] ?></p>
 				<img class="imageEntry" src="./img/egg.jpg"/>
 			</article>
 			<section id="ComentPanel">
@@ -187,25 +171,3 @@
 
 	
 </body>
-
-<footer>
-	<section class="informationFoot">
-	<a href="contact.html"><p>Contacto</p></a>
-	</section>
-	<section class="informationFoot">
-	<a href="como_se_hizo.pdf"><p>Como se hizo</p></a>
-	</section>
-	<article id="slider">
-		<figure>
-		<img src="./img/faceface.png" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		</figure>
-	</article>
-</footer>
-
-
-
-</html>

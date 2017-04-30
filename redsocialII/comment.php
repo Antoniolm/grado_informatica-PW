@@ -45,8 +45,8 @@
 					<article class="comentaryArticle">
 					<p><?php echo $_SESSION["nickname"]?></p>
 					<img src="./img/egg.jpg"/>
-					<p class="hourP"><?php echo $row[4] ?></p>
-					<p class="titleComentary"> <?php echo $row[2] ?></p>
+					<p class="hourP"><?php echo $row[0] ?></p>
+					<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>"><p class="titleComentary"> <?php echo $row[2] ?></p></a>
 					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
 					</article>
 
