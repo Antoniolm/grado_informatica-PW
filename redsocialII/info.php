@@ -5,7 +5,7 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="#">-Biografía-</a></li>
+		<li><a href="index.php?category=portada">-Biografía-</a></li>
 		<li><a href="fotos.html">-Fotos-</a></li>
 		<li><a href="#">-Informacion-</a></li>
 		</ul>
@@ -28,14 +28,15 @@
 
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
+		<?php 	$result=$user->searchUser($_SESSION['id_user']); ?>
 		<form id="ChangeInfo" action="">
 		<h2> Cambiar Información de usuario</h2>
 		<img src="./img/forest.jpg"/><br>
 		<input type="file" required/><br><br>
-		Nombre:<input type="text" required/><br><br>
-		Apellido:<input type="text" required/><br><br>
-		Nombre en la red:<input type="text" required/><br><br>
-		Contraseña:<input type="text" required/><br><br>
+		Nombre:<input type="text" placeholder="<?php echo $result["name"]?>" required/><br><br>
+		Apellido:<input type="text" placeholder="<?php echo $result["lastname"]?>" required/><br><br>
+		Nombre en la red:<input type="text" placeholder="<?php echo $result["nickname"]?>" required/><br><br>
+		Contraseña:<input type="text" placeholder="<?php echo $result["password"]?>" required/><br><br>
 		Repite la contraseña:<input type="text" required/><br><br>
 		<input type="submit" value="Cambiar" /><br><br>	
 		</form>

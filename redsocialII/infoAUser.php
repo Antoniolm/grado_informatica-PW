@@ -5,7 +5,7 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="#">-Biografía-</a></li>
+		<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION['id_Auser']?>">-Biografía-</a></li>
 		<li><a href="fotos.html">-Fotos-</a></li>
 		<li><a href="#">-Informacion-</a></li>
 		</ul>
@@ -29,11 +29,13 @@
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 		<article id="ChangeInfo" >
+			
+			<?php 	$result=$user->searchUser($_SESSION['id_Auser']); ?>
 			<h2>Información de usuario</h2>
 			<img src="./img/monkey.jpg"/><br>
-			Nombre:Maria<br><br>
-			Apellido:lopez<br><br>
-			Nombre en la red:Maria<br><br>
+			Nombre:<?php echo $result['name']?><br><br>
+			Apellido:<?php echo $result['lastname']?><br><br>
+			Nombre en la red:<?php echo $result['nickname']?><br><br>
 			Contraseña:********<br><br>
 		</article>
 		</section>
