@@ -1,157 +1,50 @@
+<?php
+	include_once "./DataBaseConnection.php";
+?>
+
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="#">-Biografía-</a></li>
+		<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION["id_Auser"]?>">-Biografía-</a></li>
 		<li><a href="fotos.html">-Fotos-</a></li>
 		<li><a href="info.html">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">
-		
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
+		<?php
+		$result=$user->searchAllUser();
+		while ($row=mysqli_fetch_row($result)){ ?>
+			<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
+			<article class="peopleArticle">
+			<p><?php echo $row[3] ?></p>
 			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="jose.html"/>
-		<article class="peopleArticle">
-			<p>Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="maria.html"/>
-		<article class="peopleArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-		</article>
-		</a>
-
-		<a href="antonio.html"/>
-		<article class="peopleArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-		</article>
-		</a>
+			</article>
+			</a>
+		<?php    				
+    		}
+		?>
 	</section>
 
 
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
-			<article class="comentaryArticle">
-			<p>Jose</p>
-			<img src="./img/egg.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="jose/jose_20170407_2123.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
-		<article class="comentaryArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="antonio/antonio_20170314_1023.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
-		<article class="comentaryArticle">
-			<p>Maria</p>
-			<img src="./img/monkey.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="maria/maria_20170405_1613.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
-		<article class="comentaryArticle">
-			<p>Antonio</p>
-			<img src="./img/egg.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="antonio/antonio_20170314_1023.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-
-		</article>
-		<article class="comentaryArticle">
-			<p>Maria</p>
-			<img src="./img/goat.jpg"/>
-			<p class="hourP"> 20 hours</p>
-			<a href="maria/maria_20170405_1613.html"><p class="titleComentary"> Titulo1</p></a>
-			<p class="textComentary" maxlength="3"> Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto
-			Esto es una prueba de texto</p>
-		</article>
+			<?php 
+				$result=$entry->searchUserEntry($_SESSION["id_Auser"]);
+				$i=0;
+				while ($row=mysqli_fetch_row($result)){
+					$userEntry=$user->searchUser($row[1]);
+					if($i<6){ ?>
+					<article class="comentaryArticle">
+					<p><?php echo $userEntry['nickname'] ?></p>
+					<img src="./img/egg.jpg"/>
+					<p class="hourP"><?php echo $row[4] ?></p>
+					<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>"><p class="titleComentary"> <?php echo $row[2] ?></p></a>
+					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
+					</article>
+			<?php    				
+    				}$i++;
+				}
+			?>
 
 		<article id="cursor">
 		<a href="#"><img  src="./img/cursorLeft.png"/></a>
@@ -192,6 +85,4 @@
 		
 		</aside>
 	</section>
-
-	
 </body>
