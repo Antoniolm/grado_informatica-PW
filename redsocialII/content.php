@@ -27,5 +27,8 @@ else if($category=='infoAUser'){
 	$_SESSION["id_Auser"]=$idUser;
 	require_once('infoAUser.php');
 }
+else if($category=='contact'){
+	require_once('contact.php');
+}
 
 ?>

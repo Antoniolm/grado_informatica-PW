@@ -1,24 +1,9 @@
-<!DOCTYPE HTML>
-<html lang = "en">
-<head><title>FaceToFace</title>
-<meta charset = "UTF-8" />
-<link rel = "stylesheet" type = "text/css" href = "estilo.css" />
-</head>
-<header>
-	<a href="portada.html"><img id="imageLogo" src="./img/faceface.png"/></a>
-	<a href="portada.html"><h1 id="nameSocial"> FaceToFace</h1></a>
-	<section id="loginPanel">
-		<a href="coment.html"><p id="NamePerfil">Pepe</p></a>
-		<a href="coment.html"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
-		<a href="index.html">Desconectar</a>
-	</section>
-</header>
 <body>
 	<nav  id="menuPanel">
 		<ul>
 		<li><a href="#">-Biografía-</a></li>
-		<li><a href="fotos.html">-Fotos-</a></li>
-		<li><a href="#">-Informacion-</a></li>
+		<li><a href="#">-Fotos-</a></li>
+		<li><a href="info.html">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">
@@ -111,13 +96,34 @@
 
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
-		<article id="ChangeInfo" >
-			<h2>Información de usuario</h2>
-			<img src="./img/monkey.jpg"/><br>
-			Nombre:Maria<br><br>
-			Apellido:lopez<br><br>
-			Nombre en la red:Maria<br><br>
-			Contraseña:********<br><br>
+		
+		<a href="./jose/jose_20170407_2123.html"><article class="photoArticle">
+			<img  src="./jose/jose_20170407_2123.jpg"/>
+		</article>
+		</a>
+
+		
+		<a href="./antonio/antonio_20170314_1023.html"><article class="photoArticle">
+			<img  src="./antonio/antonio_20170314_1023.jpg"/>
+		</article>
+		</a>
+
+		
+		<a href="./maria/maria_20170405_1613.html"><article class="photoArticle">
+			<img src="./maria/maria_20170405_1613.jpg"/>
+		</article>
+		</a>
+
+		
+		<a href="./jose/jose_20170407_2123.html"><article class="photoArticle">
+			<img  src="./jose/jose_20170407_2123.jpg"/>
+		</article>
+		</a>
+
+		
+		<article id="cursor">
+		<a href="portada.html"><img  src="./img/cursorLeft.png"/></a>
+		<a href="#" ><img src="./img/cursorRight.png"/></a>
 		</article>
 		</section>
 
@@ -154,28 +160,4 @@
 		
 		</aside>
 	</section>
-
-	
 </body>
-
-<footer>
-	<section class="informationFoot">
-	<a href="contact.html"><p>Contacto</p></a>
-	</section>
-	<section class="informationFoot">
-	<a href="como_se_hizo.pdf"><p>Como se hizo</p></a>
-	</section>
-	<article id="slider">
-		<figure>
-		<img src="./img/faceface.png" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		<img src="./img/forest.jpg" alt>
-		<img src="./img/egg.jpg" alt>
-		</figure>
-	</article>
-</footer>
-
-
-
-</html>

@@ -1,6 +1,6 @@
 <footer>
 	<section class="informationFoot">
-	<a href="contact.html"><p>Contacto</p></a>
+	<a href="index.php?category=contact"><p>Contacto</p></a>
 	</section>
 	<section class="informationFoot">
 	<a href="como_se_hizo.pdf"><p>Como se hizo</p></a>
