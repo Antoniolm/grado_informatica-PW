@@ -21,11 +21,12 @@ else if($category=='mainEntry'){
 	require_once('entrada.php');
 }
 else if($category=='info'){
+	$_SESSION["id_Auser"]='';
 	require_once('info.php');
 }
 else if($category=='infoAUser'){
 	$_SESSION["id_Auser"]=$idUser;
-	require_once('infoAUser.php');
+	require_once('info.php');
 }
 else if($category=='contact'){
 	require_once('contact.php');
