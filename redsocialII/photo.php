@@ -19,7 +19,8 @@
 	<section id="peoplePanel">
 		<?php
 		$result=$user->searchAllUser();
-		while ($row=mysqli_fetch_row($result)){ ?>
+		while ($row=mysqli_fetch_row($result)){ 
+			if($row[0]!=$_SESSION['id_user']){ ?>
 			<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
 			<article class="peopleArticle">
 			<p><?php echo $row[3] ?></p>
@@ -28,6 +29,7 @@
 			</a>
 		<?php    				
     		}
+    	}
 		?>
 	</section>
 

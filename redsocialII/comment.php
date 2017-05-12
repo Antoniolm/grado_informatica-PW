@@ -5,15 +5,16 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="index.php?category=portada">-Biografía-</a></li>
-		<li><a href="fotos.html">-Fotos-</a></li>
-		<li><a href="info.html">-Informacion-</a></li>
+			<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION["id_user"]?>">-Biografía-</a></li>
+			<li><a href="index.php?category=photo&iduser=<?php echo $_SESSION["id_user"]?>">-Fotos-</a></li>
+			<li><a href="index.php?category=infoAUser&iduser=<?php echo $_SESSION["id_user"]?>">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">
 		<?php
 		$result=$user->searchAllUser();
-		while ($row=mysqli_fetch_row($result)){ ?>
+		while ($row=mysqli_fetch_row($result)){ 
+			if($row[0]!=$_SESSION['id_user']){ ?>
 			<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
 			<article class="peopleArticle">
 			<p><?php echo $row[3] ?></p>
@@ -22,6 +23,7 @@
 			</a>
 		<?php    				
     		}
+    	}
 		?>
 	</section>
 
