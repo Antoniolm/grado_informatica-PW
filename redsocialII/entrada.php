@@ -41,7 +41,7 @@
 				<p class="hourP"> <?php echo $dataEntry['date'] ?></p>
 				<p class="titleEntry">  <?php echo $dataEntry['title'] ?></p>
 				<p class="textEntry" maxlength="3">  <?php echo $dataEntry['description'] ?></p>
-				<img class="imageEntry" src="./img/egg.jpg"/>
+				<img class="imageEntry" src="<?php echo $dataEntry['image']?>"/>
 			</article>
 			<section id="ComentPanel">
 				<?php 
@@ -71,33 +71,20 @@
 
 		<aside id="activateUserPanel">
 			<p>Usuarios Activos</p>
-			<a href="jose.html"/>
-			<article class="peopleArticle">
-			<p id="NamePerfil">Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-			</article>
-			</a>
-
-			<a href="maria.html"/>
-			<article class="peopleArticle">
-			<p id="NamePerfil">Maria</p>
-			<img src="./img/monkey.jpg"/><br>
-			</article>
-			</a>
-
-			<a href="antonio.html"/>
-			<article class="peopleArticle">
-			<p id="NamePerfil">Antonio</p>
-			<img src="./img/egg.jpg"/><br>
-			</article>
-			</a>
-
-			<a href="jose.html"/>
-			<article class="peopleArticle">
-			<p id="NamePerfil">Jose</p>
-			<img src="./img/kaiser.jpg"/><br>
-			</article>
-			</a>
+			<?php
+				$result=$user->searchAllUser();
+				while ($row=mysqli_fetch_row($result)){ 
+					if($row[0]!=$_SESSION['id_user']){ ?>
+						<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
+						<article class="peopleArticle">
+						<p id="NamePerfil"><?php echo $row[3] ?></p>
+						<img src="./img/kaiser.jpg"/><br>
+						</article>
+						</a>
+			<?php    				
+				}
+			}
+			?>
 		</aside>
 	</section>
 
