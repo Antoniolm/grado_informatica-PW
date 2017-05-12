@@ -5,9 +5,9 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="#">-Biografía-</a></li>
-		<li><a href="fotos.html">-Fotos-</a></li>
-		<li><a href="index.php?category=info">-Informacion-</a></li>
+			<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION["id_user"]?>">-Biografía-</a></li>
+			<li><a href="index.php?category=photo&iduser=<?php echo $_SESSION["id_user"]?>">-Fotos-</a></li>
+			<li><a href="index.php?category=infoAUser&iduser=<?php echo $_SESSION["id_user"]?>">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">

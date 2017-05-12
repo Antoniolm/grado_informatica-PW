@@ -8,9 +8,9 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<li><a href="#">-Biografía-</a></li>
-		<li><a href="fotos.html">-Fotos-</a></li>
-		<li><a href="info.html">-Informacion-</a></li>
+		<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION['id_Auser']?>">-Biografía-</a></li>
+		<li><a href="index.php?category=photo&iduser=<?php echo $_SESSION['id_Auser']?>">-Fotos-</a></li>
+		<li><a href="index.php?category=infoAUser&iduser=<?php echo $_SESSION['id_Auser']?>">-Informacion-</a></li>
 		</ul>
 	</nav>
 	<section id="peoplePanel">

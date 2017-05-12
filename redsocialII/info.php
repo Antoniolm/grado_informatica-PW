@@ -5,13 +5,8 @@
 <body>
 	<nav  id="menuPanel">
 		<ul>
-		<?php 	
-		if($_SESSION['id_Auser']==''){ ?>
-			<li><a href="index.php?category=portada">-Biografía-</a></li>
-		<?php } else {?>
-			<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION['id_Auser']?>">-Biografía-</a></li>
-		<?php } ?>
-		<li><a href="fotos.html">-Fotos-</a></li>
+		<li><a href="index.php?category=anotherPortada&iduser=<?php echo $_SESSION['id_Auser']?>">-Biografía-</a></li>
+		<li><a href="index.php?category=photo&iduser=<?php echo $_SESSION['id_Auser']?>">-Fotos-</a></li>
 		<li><a href="#">-Informacion-</a></li>
 		</ul>
 	</nav>
@@ -34,7 +29,7 @@
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 		<?php 	
-		if($_SESSION['id_Auser']==''){
+		if($_SESSION['id_Auser']==$_SESSION['id_user']){
 			$result=$user->searchUser($_SESSION['id_user']); ?>
 			<form id="ChangeInfo" action="">
 			<h2> Cambiar Información de usuario</h2>
