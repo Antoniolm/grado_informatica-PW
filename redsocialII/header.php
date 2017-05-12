@@ -27,7 +27,7 @@
 			</form>
 		<?php }
 		else{ ?>
-			<a href="index.php?category=comment"><p id="NamePerfil">Pepe</p></a>
+			<a href="index.php?category=comment"><p id="NamePerfil"><?php echo $_SESSION["nickname"] ?></p></a>
 			<a href="index.php?category=comment"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
 			<a href="./script/script_close_user.php">Desconectar</a>
 		<?php } ?>
