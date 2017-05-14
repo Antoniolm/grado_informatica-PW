@@ -76,7 +76,7 @@ function checkRegister(){
 function checkEntry(){ 
 	var correcto=true;
 	
-	////User////
+	////Title////
    	if (document.entryForm.title.value.length==0){ 
 		document.entryForm.title.style.border="1px solid red";
       	correcto=false; 
@@ -85,13 +85,29 @@ function checkEntry(){
 			document.entryForm.title.style.border="none";
 	}
 
-	////Password////
+	////Descripcion////
 	if (document.entryForm.description.value.length==0){ 
 		document.entryForm.description.style.border="1px solid red";
 		correcto=false;
 	} 
 	else{
 		document.entryForm.description.style.border="none";
+	}
+	
+	return correcto;
+}
+
+function checkCommentary(){ 
+	var correcto=true;
+	////Descrpition////
+	var content = document.getElementById("textAreaCommentary").value;
+	
+	if (content==""){ 
+		document.getElementById("textAreaCommentary").style.border="1px solid red";
+		correcto=false;
+	} 
+	else{
+		document.getElementById("textAreaCommentary").style.border="none";
 	}
 	
 	return correcto;

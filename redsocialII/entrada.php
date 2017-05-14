@@ -62,8 +62,8 @@
 			<section id="WritePanel">
 				<img src="./img/forest.jpg"/>
 				<p><?php echo $_SESSION["nickname"] ?></p>
-				<textarea name="description" row="4" form="usrform">Enter text here...</textarea>
-				<form id="usrform" action="./script/script_new_commentary.php?entry=<?php echo $idEntry?>&id=<?php echo $_SESSION['id_user']?>" method="post">
+				<textarea id="textAreaCommentary" name="description" row="4" form="commentaryForm" placeholder="Enter text here..."></textarea>
+				<form id="commentaryForm" action="./script/script_new_commentary.php?entry=<?php echo $idEntry?>&id=<?php echo $_SESSION['id_user']?>" method="post" onsubmit="return checkCommentary();">
 					<input type="submit"/>
 				</form>
 			</section>
