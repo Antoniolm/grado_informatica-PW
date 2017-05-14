@@ -34,7 +34,7 @@
 				<p>Pepe</p>
 				<img src="./img/forest.jpg"/>
 				
-				<form action="./script/script_new_entry.php" method="post">
+				<form action="./script/script_new_entry.php" name="entryForm" method="post" onsubmit="return checkEntry();">
 					<input id="titleWrite" type="text" id="title"  name="title"  placeholder="Introduce aqui el titulo de la entrada"/>
 					<textarea row="4" name="description" placeholder="Introduce aqui tu nueva entrada"></textarea>
 					<input id="buttonImage" type="submit" value="Upload Image"/>
