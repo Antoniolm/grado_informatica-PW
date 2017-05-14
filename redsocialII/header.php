@@ -3,6 +3,7 @@
 <head><title>FaceToFace</title>
 <meta charset = "UTF-8" />
 <link rel = "stylesheet" type = "text/css" href = "estilo.css" />
+<script src="js/script.js"></script>
 </head>
 <header>
 	<?php 
@@ -20,9 +21,9 @@
 	<section id="loginPanel">
 		<?php 
 		if(!isset($_SESSION["nickname"])){?>
-			<form action="./script/script_login_user.php" method="post">
-			Nombre:<br><input type="text" name="user" required/><br>
-			Contraseña:<br><input type="text" name="password" required/><br>
+			<form action="./script/script_login_user.php" name="loginForm" method="post" onsubmit="return checkLogin();">
+			Nombre:<br><input type="text" name="user" /><br>
+			Contraseña:<br><input type="text" name="password" /><br>
 			<input type="submit" value="login" /><br>
 			</form>
 		<?php }
