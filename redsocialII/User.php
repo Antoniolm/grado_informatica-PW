@@ -27,6 +27,11 @@ class User {
     	return $result;
     }  
 
+    public function searchConnectedUser(){
+        $result=$this->dbAccess->Query("select * from user where connected=true");
+        return $result;
+    }
+
     public function checkLogin($nickname,$password){
     	$result=$this->dbAccess->Query("select * from user where nickname='$nickname' and password='$password'");
     	$row= mysqli_fetch_array($result);

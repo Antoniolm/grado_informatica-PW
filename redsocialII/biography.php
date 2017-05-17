@@ -63,7 +63,7 @@
 		<aside id="activateUserPanel">
 			<p>Usuarios Activos</p>
 			<?php
-				$result=$user->searchAllUser();
+				$result=$user->searchConnectedUser();
 				while ($row=mysqli_fetch_row($result)){ 
 					if($row[0]!=$_SESSION['id_user']){ ?>
 						<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
