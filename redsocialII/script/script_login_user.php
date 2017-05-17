@@ -10,6 +10,7 @@ if(!empty($row)){
 	session_start();
 	$_SESSION["nickname"] = $row['nickname']; 
 	$_SESSION["id_user"] = $row['ID_user']; 
+	$user->loged($row['ID_user'],true);
 	header('location: ../index.php?category=portada');
 }else{
 	header('location: ../index.php');

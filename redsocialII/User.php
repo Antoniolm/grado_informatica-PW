@@ -31,6 +31,10 @@ class User {
     	$result=$this->dbAccess->Query("select * from user where nickname='$nickname' and password='$password'");
     	$row= mysqli_fetch_array($result);
     	return $row;
+    }
+
+    public function loged($id,$value){
+        $this->dbAccess->Query("update user set connected='$value' where ID_user='$id'");
     }   
 
 }?>
