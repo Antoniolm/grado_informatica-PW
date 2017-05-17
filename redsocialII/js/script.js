@@ -22,7 +22,7 @@ function checkLogin(){
 	return correcto;
 }
 
-function checkRegister(){ 
+function checkRegister(){
 	var correcto=true;
 
 	////Name////
@@ -70,6 +70,16 @@ function checkRegister(){
 		document.registerForm.rePass.style.border="none";
 	}
 
+	if(document.registerForm.rePass.value!=document.registerForm.password.value){
+		document.registerForm.rePass.style.border="1px solid red";
+		document.registerForm.password.style.border="1px solid red";
+		correcto=false;
+	}
+	else{
+		document.registerForm.rePass.style.border="none";
+		document.registerForm.password.style.border="none";
+	}
+
 	return correcto;
 }
 
@@ -112,3 +122,65 @@ function checkCommentary(){
 	
 	return correcto;
 }
+
+function checkInfo(){
+	var correcto=true;
+
+	////Name////
+   	if (document.infoForm.name.value.length==0){ 
+		document.infoForm.name.style.border="1px solid red";
+      	correcto=false; 
+   	} 
+	else{
+			document.infoForm.name.style.border="none";
+	}
+
+	////Lastname////
+	if (document.infoForm.lastname.value.length==0){ 
+		document.infoForm.lastname.style.border="1px solid red";
+      	correcto=false; 
+   	} 
+	else{
+			document.infoForm.lastname.style.border="none";
+	}
+
+	////Nickname////
+	if (document.infoForm.nickname.value.length==0){ 
+		document.infoForm.nickname.style.border="1px solid red";
+      	correcto=false; 
+   	} 
+	else{
+			document.infoForm.nickname.style.border="none";
+	}
+
+	////Password////
+	if (document.infoForm.pass.value.length==0){ 
+		document.infoForm.pass.style.border="1px solid red";
+		correcto=false;
+	} 
+	else{
+		document.infoForm.pass.style.border="none";
+	}
+
+	////Re-password////
+	if (document.infoForm.rePass.value.length==0){ 
+		document.infoForm.rePass.style.border="1px solid red";
+		correcto=false;
+	} 
+	else{
+		document.infoForm.rePass.style.border="none";
+	}
+
+	if(document.infoForm.rePass.value!=document.infoForm.pass.value){
+		document.infoForm.rePass.style.border="1px solid red";
+		document.infoForm.pass.style.border="1px solid red";
+		correcto=false;
+	}
+	else {
+		document.infoForm.rePass.style.border="none";
+		document.infoForm.pass.style.border="none";
+	}
+
+	return correcto;
+}
+
