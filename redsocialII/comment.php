@@ -42,7 +42,7 @@
 				</form>
 			</section>
 			<?php 
-				$result=$entry->searchUserEntryLimit($_SESSION["id_user"],$_SESSION["currentPage"],$_SESSION["currentPage"]+6);
+				$result=$entry->searchUserEntryLimit($_SESSION["id_user"],$_SESSION["currentPage"],6);
 				$i=0;
 				while ($row=mysqli_fetch_row($result)){ ?>
 					<article class="comentaryArticle">
@@ -54,12 +54,21 @@
 					</article>
 
 			<?php    				
-    		}
+    		 $i++;}
 			?>
 
 		<article id="cursor">
-		<a href="#"><img  src="./img/cursorLeft.png"/></a>
-		<a href="#" ><img src="./img/cursorRight.png"/></a>
+			<?php 
+			 if($_SESSION["currentPage"]!=0) { ?>
+				<a href="index.php?category=comment&currentPage=<?php echo $_SESSION["currentPage"]-6 ?>"><img  src="./img/cursorLeft.png"/></a>
+			<?php } else { ?>
+				<a href="#"><img  src="./img/cursorLeft.png"/></a>
+			<?php } 
+			if($i>4) { ?>
+				<a href="index.php?category=comment&currentPage=<?php echo $_SESSION["currentPage"]+6 ?>"><img  src="./img/cursorRight.png"/></a>
+			<?php } else {?>
+				<a href="#"><img  src="./img/cursorRight.png"/></a>
+			<?php } ?>
 		</article>
 		</section>
 
