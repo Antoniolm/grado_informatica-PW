@@ -27,6 +27,16 @@ class Entry {
         return $result;
     }    
 
+    public function searchEntryLimit($Begin,$End){
+        $result=$this->dbAccess->Query("select * from entry limit ".$Begin.",".$End);
+        return $result;
+    } 
+
+    public function searchUserEntryLimit($id,$Begin,$End){
+        $result=$this->dbAccess->Query("select * from entry where ID_user='$id' limit ".$Begin.",".$End);
+        return $result;
+    } 
+
     public function searchAllEntry(){
     	$result=$this->dbAccess->Query("select * from entry");
     	return $result;

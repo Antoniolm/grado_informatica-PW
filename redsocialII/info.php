@@ -15,7 +15,7 @@
 		$result=$user->searchAllUser();
 		while ($row=mysqli_fetch_row($result)){ 
 			if($row[0]!=$_SESSION['id_user']){ ?>
-			<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
+			<a href="index.php?category=infoAUser&iduser=<?php echo $row[0]?>"/>
 			<article class="peopleArticle">
 			<p><?php echo $row[3] ?></p>
 			<img src="<?php echo $row[5]?> " onmouseover="showUserEntry(<?php echo $row[0] ?>);" /><br>

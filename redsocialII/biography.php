@@ -37,11 +37,10 @@
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 			<?php 
-				$result=$entry->searchUserEntry($_SESSION["id_Auser"]);
-				$i=0;
+				$result=$entry->searchUserEntryLimit($_SESSION["id_Auser"],0,6);
 				while ($row=mysqli_fetch_row($result)){
 					$userEntry=$user->searchUser($row[1]);
-					if($i<6){ ?>
+					 ?>
 					<article class="comentaryArticle">
 					<p><?php echo $userEntry['nickname'] ?></p>
 					<img src="./img/egg.jpg"/>
@@ -50,7 +49,6 @@
 					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
 					</article>
 			<?php    				
-    				}$i++;
 				}
 			?>
 

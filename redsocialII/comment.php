@@ -42,7 +42,8 @@
 				</form>
 			</section>
 			<?php 
-				$result=$entry->searchUserEntry($_SESSION["id_user"]);
+				$result=$entry->searchUserEntryLimit($_SESSION["id_user"],0,6);
+				$i=0;
 				while ($row=mysqli_fetch_row($result)){ ?>
 					<article class="comentaryArticle">
 					<p><?php echo $_SESSION["nickname"]?></p>
@@ -53,7 +54,7 @@
 					</article>
 
 			<?php    				
-    			}
+    		}
 			?>
 
 		<article id="cursor">
