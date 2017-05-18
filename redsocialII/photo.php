@@ -21,7 +21,7 @@
 		$result=$user->searchAllUser();
 		while ($row=mysqli_fetch_row($result)){ 
 			if($row[0]!=$_SESSION['id_user']){ ?>
-			<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
+			<a href="index.php?category=photo&iduser=<?php echo $row[0]?>"/>
 			<article class="peopleArticle">
 			<p><?php echo $row[3] ?></p>
 			<img src="<?php echo $row[5]?> " onmouseover="showUserEntry(<?php echo $row[0] ?>);" /><br>
@@ -37,7 +37,7 @@
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 		<?php 
-				$result=$entry->searchUserEntry($_SESSION["id_Auser"]);
+				$result=$entry->searchUserEntryLimit($_SESSION["id_Auser"],$_SESSION["currentPage"],$_SESSION["currentPage"]+6);
 				$i=0;
 				while ($row=mysqli_fetch_row($result)){
 					$userEntry=$user->searchUser($row[1]);

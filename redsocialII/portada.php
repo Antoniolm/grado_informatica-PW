@@ -31,7 +31,8 @@
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 			<?php 
-				$result=$entry->searchEntryLimit(0,6);
+				$result=$entry->searchEntryLimit($_SESSION["currentPage"],6);
+				$i=0;
 				while ($row=mysqli_fetch_row($result)){
 					$userEntry=$user->searchUser($row[1]);?>
 					<article class="comentaryArticle">
@@ -41,13 +42,24 @@
 					<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>"><p class="titleComentary"> <?php echo $row[2] ?></p></a>
 					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
 					</article>
-			<?php    				
+			<?php   
+				$i++; 				
 				}
 			?>
 
 		<article id="cursor">
-		<a href="#"><img  src="./img/cursorLeft.png"/></a>
-		<a href="portadaSigPag.html" ><img src="./img/cursorRight.png"/></a>
+		<?php 
+		 if($_SESSION["currentPage"]!=0) { ?>
+			<a href="index.php?category=portada&currentPage=<?php echo $_SESSION["currentPage"]-6 ?>"><img  src="./img/cursorLeft.png"/></a>
+		<?php } else { ?>
+			<a href="#"><img  src="./img/cursorLeft.png"/></a>
+		<?php } 
+		if($i>4) { ?>
+			<a href="index.php?category=portada&currentPage=<?php echo $_SESSION["currentPage"]+6 ?>"><img  src="./img/cursorRight.png"/></a>
+		<?php } else {?>
+			<a href="#"><img  src="./img/cursorRight.png"/></a>
+		<?php } ?>
+
 		</article>
 		</section>
 

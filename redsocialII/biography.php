@@ -37,7 +37,7 @@
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 			<?php 
-				$result=$entry->searchUserEntryLimit($_SESSION["id_Auser"],0,6);
+				$result=$entry->searchUserEntryLimit($_SESSION["id_Auser"],$_SESSION["currentPage"],$_SESSION["currentPage"]+6);
 				while ($row=mysqli_fetch_row($result)){
 					$userEntry=$user->searchUser($row[1]);
 					 ?>

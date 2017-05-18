@@ -42,7 +42,7 @@
 				</form>
 			</section>
 			<?php 
-				$result=$entry->searchUserEntryLimit($_SESSION["id_user"],0,6);
+				$result=$entry->searchUserEntryLimit($_SESSION["id_user"],$_SESSION["currentPage"],$_SESSION["currentPage"]+6);
 				$i=0;
 				while ($row=mysqli_fetch_row($result)){ ?>
 					<article class="comentaryArticle">
