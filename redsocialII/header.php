@@ -1,3 +1,7 @@
+<?php
+	include_once "./DataBaseConnection.php";
+?>
+
 <!DOCTYPE HTML>
 <html lang = "en">
 <head><title>FaceToFace</title>
@@ -27,9 +31,10 @@
 			<input type="submit" value="login" /><br>
 			</form>
 		<?php }
-		else{ ?>
+		else{ 
+			$result=$user->searchUser($_SESSION["id_user"]); ?>
 			<a href="index.php?category=comment"><p id="NamePerfil"><?php echo $_SESSION["nickname"] ?></p></a>
-			<a href="index.php?category=comment"><img id="ImagePerfil" src="./img/forest.jpg"/><br></a>
+			<a href="index.php?category=comment"><img id="ImagePerfil" src="<?php echo $result["image"]?> "/><br></a>
 			<a href="./script/script_close_user.php">Desconectar</a>
 		<?php } ?>
 		

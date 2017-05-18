@@ -24,7 +24,7 @@
 			<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
 			<article class="peopleArticle">
 			<p><?php echo $row[3] ?></p>
-			<img src="./img/kaiser.jpg"/><br>
+			<img src="<?php echo $row[5]?> " onmouseover="showUserEntry(<?php echo $row[0] ?>);" /><br>
 			</article>
 			</a>
 		<?php    				
@@ -69,7 +69,7 @@
 						<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
 						<article class="peopleArticle">
 						<p id="NamePerfil"><?php echo $row[3] ?></p>
-						<img src="./img/kaiser.jpg"/><br>
+						<img src="<?php echo $row[5]?>"/><br>
 						</article>
 						</a>
 			<?php    				
