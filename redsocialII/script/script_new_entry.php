@@ -5,7 +5,7 @@ session_start();
 $id_user=$_SESSION["id_user"];
 $title = isset($_POST['title']) ? $_POST['title'] : '';
 $description = isset($_POST['description']) ? $_POST['description'] : '';
-$date="12/05/2017";
+$date= date("d-m-Y");;
 $image="./img/forest.jpg";
 
 $entry->insertEntryDB($id_user,$title,$description,$date,$image);

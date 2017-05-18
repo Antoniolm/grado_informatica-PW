@@ -33,15 +33,16 @@
 		<?php 	
 		if($_SESSION['id_Auser']==$_SESSION['id_user']){
 			$result=$user->searchUser($_SESSION['id_user']); ?>
-			<form id="ChangeInfo" name"infoForm" action="./script/script_update_user.php" method="post" onsubmit="return checkInfo();">
+			<form action="./script/script_update_user.php"  id="ChangeInfo" name="infoForm" method="post" onsubmit="return checkInfo();">
 			<h2> Cambiar Información de usuario</h2>
 			<img src="./img/forest.jpg"/><br>
-			Nombre:<input type="text" name="name" placeholder="<?php echo $result["name"]?>" /><br><br>
+			<input type="file" name="file" /><br><br>
+			Nombre:<input type="text" name="nameUser" placeholder="<?php echo $result["name"]?>" /><br><br>
 			Apellido:<input type="text" name="lastname" placeholder="<?php echo $result["lastname"]?>" /><br><br>
 			Nombre en la red:<input type="text" name="nickname" placeholder="<?php echo $result["nickname"]?>" /><br><br>
-			Contraseña:<input type="text" name="pass" placeholder="<?php echo $result["password"]?>" /><br><br>
-			Repite la contraseña:<input type="text" name="repass" /><br><br>
-			<input type="submit" value="Cambiar" /><br><br>	
+			Contraseña:<input type="text" name="password" placeholder="<?php echo $result["password"]?>" /><br><br>
+			Repite la contraseña:<input type="text" name="rePassword" /><br><br>
+			<input type="submit" value="login" /><br>
 			</form>
 		<?php
 		 } else { ?>

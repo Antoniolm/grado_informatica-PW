@@ -31,7 +31,7 @@
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 			<section id="writePerfilPanel">
-				<p>Pepe</p>
+				<p><?php echo $_SESSION["nickname"] ?></p>
 				<img src="./img/forest.jpg"/>
 				
 				<form action="./script/script_new_entry.php" name="entryForm" method="post" onsubmit="return checkEntry();">

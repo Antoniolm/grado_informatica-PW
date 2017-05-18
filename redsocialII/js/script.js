@@ -123,16 +123,36 @@ function checkCommentary(){
 	return correcto;
 }
 
-function checkInfo(){
-	var correcto=true;
 
-	////Name////
-   	if (document.infoForm.name.value.length==0){ 
-		document.infoForm.name.style.border="1px solid red";
+
+function checkInfo(){ 
+	var correcto=true;
+	
+	////User////
+   	if (document.infoForm.nameUser.value.length==0){ 
+		document.infoForm.nameUser.style.border="1px solid red";
       	correcto=false; 
    	} 
 	else{
-			document.infoForm.name.style.border="none";
+			document.infoForm.nameUser.style.border="none";
+	}
+
+	////Password////
+	if (document.infoForm.password.value.length==0){ 
+		document.infoForm.password.style.border="1px solid red";
+		correcto=false;
+	} 
+	else{
+		document.infoForm.password.style.border="none";
+	}
+
+	////Password////
+	if (document.infoForm.rePassword.value.length==0){ 
+		document.infoForm.rePassword.style.border="1px solid red";
+		correcto=false;
+	} 
+	else{
+		document.infoForm.rePassword.style.border="none";
 	}
 
 	////Lastname////
@@ -153,34 +173,5 @@ function checkInfo(){
 			document.infoForm.nickname.style.border="none";
 	}
 
-	////Password////
-	if (document.infoForm.pass.value.length==0){ 
-		document.infoForm.pass.style.border="1px solid red";
-		correcto=false;
-	} 
-	else{
-		document.infoForm.pass.style.border="none";
-	}
-
-	////Re-password////
-	if (document.infoForm.rePass.value.length==0){ 
-		document.infoForm.rePass.style.border="1px solid red";
-		correcto=false;
-	} 
-	else{
-		document.infoForm.rePass.style.border="none";
-	}
-
-	if(document.infoForm.rePass.value!=document.infoForm.pass.value){
-		document.infoForm.rePass.style.border="1px solid red";
-		document.infoForm.pass.style.border="1px solid red";
-		correcto=false;
-	}
-	else {
-		document.infoForm.rePass.style.border="none";
-		document.infoForm.pass.style.border="none";
-	}
-
 	return correcto;
 }
-
