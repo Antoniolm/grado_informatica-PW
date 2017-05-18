@@ -6,7 +6,7 @@ session_start();
 $name = isset($_POST['nameUser']) ? $_POST['nameUser'] : '';
 $lastname = isset($_POST['lastname']) ? $_POST['lastname'] : '';
 $nickname = isset($_POST['nickname']) ? $_POST['nickname'] : '';
-$password = isset($_POST['pass']) ? $_POST['pass'] : '';
+$password = isset($_POST['password']) ? $_POST['password'] : '';
 $image = isset($_POST['image']) ? $_POST['image'] : './img/egg.jpg';
 $id=$_SESSION["id_user"];
 

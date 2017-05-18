@@ -175,3 +175,7 @@ function checkInfo(){
 
 	return correcto;
 }
+
+function showUserEntry(id){
+	window.open("titleUserBrowser.php?id="+id,"_blank","toolbar=no, location=yes, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=400, height=200");
+}
