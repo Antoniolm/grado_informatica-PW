@@ -27,12 +27,13 @@
 		?>
 	</section>
 
-
+	<?php $theUser=$user->searchUser($_SESSION["id_user"]); 
+	?>
 	<section id="mainPerfilSection">
 		<section id="comentaryPanel">
 			<section id="writePerfilPanel">
 				<p><?php echo $_SESSION["nickname"] ?></p>
-				<img src="./img/forest.jpg"/>
+				<img src="<?php echo $theUser["image"]?>"/>
 				
 				<form action="./script/script_new_entry.php" name="entryForm" method="post" onsubmit="return checkEntry();">
 					<input id="titleWrite" type="text" id="title"  name="title"  placeholder="Introduce aqui el titulo de la entrada"/>
@@ -47,7 +48,7 @@
 				while ($row=mysqli_fetch_row($result)){ ?>
 					<article class="comentaryArticle">
 					<p><?php echo $_SESSION["nickname"]?></p>
-					<img src="./img/egg.jpg"/>
+					<img src="<?php echo $theUser["image"]?> "/>
 					<p class="hourP"><?php echo $row[4] ?></p>
 					<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>"><p class="titleComentary"> <?php echo $row[2] ?></p></a>
 					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
