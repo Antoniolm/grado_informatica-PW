@@ -8,8 +8,8 @@ class Entry {
         $this->dbAccess = $dbAccess;
     }
 
-    public function insertEntryDB($id_user, $title,$description,$date,$image){
-    	$this->dbAccess->Query("insert into entry (ID_user,title,description,date,image) values ('$id_user','$title','$description','$date','$image')");
+    public function insertEntryDB($id_user, $title,$description,$date,$hour,$image){
+    	$this->dbAccess->Query("insert into entry (ID_user,title,description,date,hour,image) values ('$id_user','$title','$description','$date','$hour','$image')");
     }
 
     public function updateEntryDB($id_entry,$id_user, $title,$description,$date){

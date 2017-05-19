@@ -38,7 +38,13 @@
 					<article class="comentaryArticle">
 					<p><?php echo $userEntry['nickname'] ?></p>
 					<img src="<?php echo $userEntry['image'] ?>"/>
-					<p class="hourP"><?php echo $row[4] ?></p>
+
+					<?php if($row[4]!=date("d-m-Y")){?>
+						<p class="hourP"><?php echo $row[4] ?></p>
+					<?php } else { ?>
+						<p class="hourP"><?php echo "hace ".(date("H")-$row[5])." hora"?></p>
+					<?php } ?>
+
 					<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>"><p class="titleComentary"> <?php echo $row[2] ?></p></a>
 					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
 					</article>

@@ -40,8 +40,7 @@
 				$result=$entry->searchUserEntryLimit($_SESSION["id_Auser"],$_SESSION["currentPage"],6);
 				$i=0;
 				while ($row=mysqli_fetch_row($result)){
-					$userEntry=$user->searchUser($row[1]);
-					 ?>
+					$userEntry=$user->searchUser($row[1]);?>
 					<article class="comentaryArticle">
 					<p><?php echo $userEntry['nickname'] ?></p>
 					<img src="<?php echo $userEntry['image'] ?>"/>
