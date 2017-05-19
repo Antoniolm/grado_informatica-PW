@@ -43,7 +43,7 @@
 					$userEntry=$user->searchUser($row[1]);?>
 						<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>">
 						<article class="photoArticle">
-							<img  src="<?php echo $row[5]?>"/>
+							<img  src="<?php echo $row[6]?>"/>
 						</article>
 						</a>
 			<?php    				

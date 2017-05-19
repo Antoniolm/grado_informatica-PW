@@ -10,7 +10,7 @@ if($category==''){
 else if($category=='portada'){
 	$_SESSION["id_Auser"]='';
 	$_SESSION["currentPage"]=$currentPage;
-	require_once('portada.php');
+	require_once('cover.php');
 }
 else if($category=='anotherPortada'){
 	$_SESSION["id_Auser"]=$idUser;
@@ -32,7 +32,7 @@ else if($category=='comment'){
 }
 else if($category=='mainEntry'){
 	$_SESSION["id_comentary"]=$idCommentary;
-	require_once('entrada.php');
+	require_once('entry.php');
 }
 
 else if($category=='contact'){

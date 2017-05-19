@@ -49,7 +49,7 @@
 					while ($row=mysqli_fetch_row($result)){ 
 						$userCommentary=$user->searchUser($row[2]) ?>
 						<article class="UserComent">
-						<img src="./img/monkey.jpg"/>
+						<img src="<?php echo $userCommentary['image']?>"/>
 						<p><?php echo $userCommentary['nickname']." - ".$row[3]; ?> </p>
 						<p><?php echo $row[4]; ?></p>
 						</article>
