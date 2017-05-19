@@ -17,28 +17,28 @@ class Entry {
     }
 
 	public function searchEntry($id){
-    	$result=$this->dbAccess->Query("select * from entry where ID_entry='$id'");
+    	$result=$this->dbAccess->Query("select * from entry where ID_entry='$id' ORDER BY ID_entry DESC");
     	$row= mysqli_fetch_array($result);
     	return $row;
     }
 
     public function searchUserEntry($id){
-        $result=$this->dbAccess->Query("select * from entry where ID_user='$id'");
+        $result=$this->dbAccess->Query("select * from entry where ID_user='$id'  ORDER BY ID_entry DESC");
         return $result;
     }    
 
     public function searchEntryLimit($Begin,$End){
-        $result=$this->dbAccess->Query("select * from entry limit ".$Begin.",".$End);
+        $result=$this->dbAccess->Query("select * from entry ORDER BY ID_entry DESC limit ".$Begin.",".$End);
         return $result;
     } 
 
     public function searchUserEntryLimit($id,$Begin,$End){
-        $result=$this->dbAccess->Query("select * from entry where ID_user='$id' limit ".$Begin.",".$End);
+        $result=$this->dbAccess->Query("select * from entry where ID_user='$id' ORDER BY ID_entry DESC limit ".$Begin.",".$End);
         return $result;
     } 
 
     public function searchAllEntry(){
-    	$result=$this->dbAccess->Query("select * from entry");
+    	$result=$this->dbAccess->Query("select * from entry ORDER BY ID_entry DESC");
     	return $result;
     }  
 

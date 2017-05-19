@@ -37,7 +37,7 @@
 			<article class="entryArticle">
 				
 				<p> <?php echo $dataUser['nickname'] ?></p>
-				<img src="./img/forest.jpg"/>
+				<img src="<?php echo $dataUser['image']?>"/>
 				<p class="hourP"> <?php echo $dataEntry['date'] ?></p>
 				<p class="titleEntry">  <?php echo $dataEntry['title'] ?></p>
 				<p class="textEntry" maxlength="3">  <?php echo $dataEntry['description'] ?></p>
