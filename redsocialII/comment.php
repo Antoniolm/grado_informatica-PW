@@ -13,6 +13,7 @@
 	<section id="peoplePanel">
 		<?php
 		$result=$user->searchAllUser();
+
 		while ($row=mysqli_fetch_row($result)){ 
 			if($row[0]!=$_SESSION['id_user']){ ?>
 			<a href="index.php?category=anotherPortada&iduser=<?php echo $row[0]?>"/>
@@ -44,7 +45,7 @@
 			</section>
 			<?php 
 				$result=$entry->searchUserEntryLimit($_SESSION["id_user"],$_SESSION["currentPage"],6);
-				$i=0;
+				$numEntry=$entry->searchNumUserEntry($_SESSION["id_user"]);
 				while ($row=mysqli_fetch_row($result)){ ?>
 					<article class="comentaryArticle">
 					<p><?php echo $_SESSION["nickname"]?></p>
@@ -61,7 +62,7 @@
 					</article>
 
 			<?php    				
-    		 $i++;}
+				}
 			?>
 
 		<article id="cursor">
@@ -71,7 +72,7 @@
 			<?php } else { ?>
 				<a href="#"><img  src="./img/cursorLeft.png"/></a>
 			<?php } 
-			if($i>4) { ?>
+			if($_SESSION["currentPage"]+6<$numEntry) { ?>
 				<a href="index.php?category=comment&currentPage=<?php echo $_SESSION["currentPage"]+6 ?>"><img  src="./img/cursorRight.png"/></a>
 			<?php } else {?>
 				<a href="#"><img  src="./img/cursorRight.png"/></a>

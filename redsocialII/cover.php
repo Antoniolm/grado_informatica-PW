@@ -32,7 +32,7 @@
 		<section id="comentaryPanel">
 			<?php 
 				$result=$entry->searchEntryLimit($_SESSION["currentPage"],6);
-				$i=0;
+				$numEntry=$entry->searchNumEntry();
 				while ($row=mysqli_fetch_row($result)){
 					$userEntry=$user->searchUser($row[1]);?>
 					<article class="comentaryArticle">
@@ -48,8 +48,7 @@
 					<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>"><p class="titleComentary"> <?php echo $row[2] ?></p></a>
 					<p class="textComentary" maxlength="3"> <?php echo $row[3] ?></p>
 					</article>
-			<?php   
-				$i++; 				
+			<?php   				
 				}
 			?>
 
@@ -60,7 +59,7 @@
 		<?php } else { ?>
 			<a href="#"><img  src="./img/cursorLeft.png"/></a>
 		<?php } 
-		if($i>4) { ?>
+		if($_SESSION["currentPage"]+6<$numEntry) { ?>
 			<a href="index.php?category=portada&currentPage=<?php echo $_SESSION["currentPage"]+6 ?>"><img  src="./img/cursorRight.png"/></a>
 		<?php } else {?>
 			<a href="#"><img  src="./img/cursorRight.png"/></a>

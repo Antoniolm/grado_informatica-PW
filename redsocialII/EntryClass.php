@@ -27,6 +27,18 @@ class Entry {
         return $result;
     }    
 
+    public function searchNumEntry(){
+        $result=$this->dbAccess->Query("select * from entry ORDER BY ID_entry DESC");
+        $num_rows = mysqli_num_rows($result);
+        return $num_rows;
+    }  
+
+    public function searchNumUserEntry($id){
+        $result=$this->dbAccess->Query("select * from entry where ID_user='$id'  ORDER BY ID_entry DESC");
+        $num_rows = mysqli_num_rows($result);
+        return $num_rows;
+    }  
+
     public function searchEntryLimit($Begin,$End){
         $result=$this->dbAccess->Query("select * from entry ORDER BY ID_entry DESC limit ".$Begin.",".$End);
         return $result;

@@ -38,16 +38,16 @@
 		<section id="comentaryPanel">
 		<?php 
 				$result=$entry->searchUserEntryLimit($_SESSION["id_Auser"],$_SESSION["currentPage"],6);
-				$i=0;
-				while ($row=mysqli_fetch_row($result)){
-					$userEntry=$user->searchUser($row[1]);?>
+				$userEntry=$user->searchUser($_SESSION["id_Auser"]);
+				$numEntry=$entry->searchNumUserEntry($_SESSION["id_Auser"]);
+				while ($row=mysqli_fetch_row($result)){?>
 						<a href="index.php?category=mainEntry&id=<?php echo $row[0]?>">
 						<article class="photoArticle">
 							<img  src="<?php echo $row[6]?>"/>
 						</article>
 						</a>
 			<?php    				
-    			$i++; }
+    			}
 			?>
 		
 		<article id="cursor">
@@ -57,7 +57,7 @@
 		<?php } else { ?>
 			<a href="#"><img  src="./img/cursorLeft.png"/></a>
 		<?php } 
-		if($i>4) { ?>
+		if($_SESSION["currentPage"]+6<$numEntry) { ?>
 			<a href="index.php?category=photo&currentPage=<?php echo $_SESSION["currentPage"]+6 ?>&iduser=<?php echo $_SESSION["id_user"]?>"><img  src="./img/cursorRight.png"/></a>
 		<?php } else {?>
 			<a href="#"><img  src="./img/cursorRight.png"/></a>
