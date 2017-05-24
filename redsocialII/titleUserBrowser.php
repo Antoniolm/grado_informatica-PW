@@ -15,7 +15,10 @@
 		<section id="comentaryPanelUserWind">
 			<?php 
 				$result=$entry->searchUserEntry($id);
-				while ($row=mysqli_fetch_row($result)){ ?>
+				$userInfo=$user->searchUser($id);?>
+				<p><?php echo $userInfo["nickname"]; ?> </p>
+				
+				<?php while ($row=mysqli_fetch_row($result)){ ?>
 					<article class="comentaryEntryUserWind">
 					<p class="titleComentary"> <?php echo $row[2] ?></p>
 					</article>
