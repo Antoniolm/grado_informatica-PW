@@ -35,7 +35,7 @@
 			$result=$user->searchUser($_SESSION['id_user']); ?>
 			<form action="./script/script_update_user.php"  id="ChangeInfo" name="infoForm" method="post" onsubmit="return checkInfo();">
 			<h2> Cambiar Información de usuario</h2>
-			<img src="./img/forest.jpg"/><br>
+			<img src="<?php echo $result["image"] ?>"/><br>
 			<input type="file" name="file" /><br><br>
 			Nombre:<input type="text" name="nameUser" placeholder="<?php echo $result["name"]?>" /><br><br>
 			Apellido:<input type="text" name="lastname" placeholder="<?php echo $result["lastname"]?>" /><br><br>
@@ -51,7 +51,7 @@
 			
 			<?php 	$result=$user->searchUser($_SESSION['id_Auser']); ?>
 			<h2>Información de usuario</h2>
-			<img src="./img/monkey.jpg"/><br>
+			<img src="<?php echo $result["image"] ?>"/><br>
 			Nombre:<?php echo $result['name']?><br><br>
 			Apellido:<?php echo $result['lastname']?><br><br>
 			Nombre en la red:<?php echo $result['nickname']?><br><br>

@@ -53,12 +53,12 @@
 		<article id="cursor">
 			<?php 
 		 if($_SESSION["currentPage"]!=0) { ?>
-			<a href="index.php?category=photo&currentPage=<?php echo $_SESSION["currentPage"]-6 ?>&iduser=<?php echo $_SESSION["id_user"]?>"><img  src="./img/cursorLeft.png"/></a>
+			<a href="index.php?category=photo&currentPage=<?php echo $_SESSION["currentPage"]-6 ?>&iduser=<?php echo $_SESSION["id_Auser"]?>"><img  src="./img/cursorLeft.png"/></a>
 		<?php } else { ?>
 			<a href="#"><img  src="./img/cursorLeft.png"/></a>
 		<?php } 
 		if($_SESSION["currentPage"]+6<$numEntry) { ?>
-			<a href="index.php?category=photo&currentPage=<?php echo $_SESSION["currentPage"]+6 ?>&iduser=<?php echo $_SESSION["id_user"]?>"><img  src="./img/cursorRight.png"/></a>
+			<a href="index.php?category=photo&currentPage=<?php echo $_SESSION["currentPage"]+6 ?>&iduser=<?php echo $_SESSION["id_Auser"]?>"><img  src="./img/cursorRight.png"/></a>
 		<?php } else {?>
 			<a href="#"><img  src="./img/cursorRight.png"/></a>
 		<?php } ?>

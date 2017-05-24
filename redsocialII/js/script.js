@@ -2,7 +2,7 @@ function checkLogin(){
 	var correcto=true;
 	
 	////User////
-   	if (document.loginForm.user.value.length==0){ 
+   	if (document.loginForm.user.value==""){ 
 		document.loginForm.user.style.border="1px solid red";
       	correcto=false; 
    	} 
@@ -11,7 +11,7 @@ function checkLogin(){
 	}
 
 	////Password////
-	if (document.loginForm.password.value.length==0){ 
+	if (document.loginForm.password.value==""){ 
 		document.loginForm.password.style.border="1px solid red";
 		correcto=false;
 	} 
@@ -26,7 +26,7 @@ function checkRegister(){
 	var correcto=true;
 
 	////Name////
-   	if (document.registerForm.name.value.length==0){ 
+   	if (document.registerForm.name.value==""){ 
 		document.registerForm.name.style.border="1px solid red";
       	correcto=false; 
    	} 
@@ -35,7 +35,7 @@ function checkRegister(){
 	}
 
 	////Lastname////
-	if (document.registerForm.lastname.value.length==0){ 
+	if (document.registerForm.lastname.value==""){ 
 		document.registerForm.lastname.style.border="1px solid red";
       	correcto=false; 
    	} 
@@ -44,7 +44,7 @@ function checkRegister(){
 	}
 
 	////Nickname////
-	if (document.registerForm.nickname.value.length==0){ 
+	if (document.registerForm.nickname.value==""){ 
 		document.registerForm.nickname.style.border="1px solid red";
       	correcto=false; 
    	} 
@@ -53,7 +53,7 @@ function checkRegister(){
 	}
 
 	////Password////
-	if (document.registerForm.password.value.length==0){ 
+	if (document.registerForm.password.value==""){ 
 		document.registerForm.password.style.border="1px solid red";
 		correcto=false;
 	} 
@@ -62,22 +62,12 @@ function checkRegister(){
 	}
 
 	////Re-password////
-	if (document.registerForm.rePass.value.length==0){ 
+	if (document.registerForm.rePass.value==""){ 
 		document.registerForm.rePass.style.border="1px solid red";
 		correcto=false;
 	} 
 	else{
 		document.registerForm.rePass.style.border="none";
-	}
-
-	if(document.registerForm.rePass.value!=document.registerForm.password.value){
-		document.registerForm.rePass.style.border="1px solid red";
-		document.registerForm.password.style.border="1px solid red";
-		correcto=false;
-	}
-	else{
-		document.registerForm.rePass.style.border="none";
-		document.registerForm.password.style.border="none";
 	}
 
 	return correcto;
@@ -87,7 +77,7 @@ function checkEntry(){
 	var correcto=true;
 	
 	////Title////
-   	if (document.entryForm.title.value.length==0){ 
+   	if (document.entryForm.title.value==""){ 
 		document.entryForm.title.style.border="1px solid red";
       	correcto=false; 
    	} 
@@ -96,7 +86,7 @@ function checkEntry(){
 	}
 
 	////Descripcion////
-	if (document.entryForm.description.value.length==0){ 
+	if (document.entryForm.description.value==""){ 
 		document.entryForm.description.style.border="1px solid red";
 		correcto=false;
 	} 
@@ -129,7 +119,7 @@ function checkInfo(){
 	var correcto=true;
 	
 	////User////
-   	if (document.infoForm.nameUser.value.length==0){ 
+   	if (document.infoForm.nameUser.value==""){ 
 		document.infoForm.nameUser.style.border="1px solid red";
       	correcto=false; 
    	} 
@@ -138,7 +128,7 @@ function checkInfo(){
 	}
 
 	////Password////
-	if (document.infoForm.password.value.length==0){ 
+	if (document.infoForm.password.value==""){ 
 		document.infoForm.password.style.border="1px solid red";
 		correcto=false;
 	} 
@@ -147,7 +137,7 @@ function checkInfo(){
 	}
 
 	////Password////
-	if (document.infoForm.rePassword.value.length==0){ 
+	if (document.infoForm.rePassword.value==""){ 
 		document.infoForm.rePassword.style.border="1px solid red";
 		correcto=false;
 	} 
@@ -156,7 +146,7 @@ function checkInfo(){
 	}
 
 	////Lastname////
-	if (document.infoForm.lastname.value.length==0){ 
+	if (document.infoForm.lastname.value==""){ 
 		document.infoForm.lastname.style.border="1px solid red";
       	correcto=false; 
    	} 
@@ -165,7 +155,7 @@ function checkInfo(){
 	}
 
 	////Nickname////
-	if (document.infoForm.nickname.value.length==0){ 
+	if (document.infoForm.nickname.value==""){ 
 		document.infoForm.nickname.style.border="1px solid red";
       	correcto=false; 
    	} 
