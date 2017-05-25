@@ -167,5 +167,5 @@ function checkInfo(){
 }
 
 function showUserEntry(id){
-	window.open("titleUserBrowser.php?id="+id,"_blank","toolbar=no, location=yes, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=400, height=200");
+	var ventana=window.open("titleUserBrowser.php?id="+id,"ventana","toolbar=no, location=yes, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=400, height=200");
 }
